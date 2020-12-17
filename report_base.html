@@ -1,0 +1,113 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Provide DataScience, AI, SAP-FICO,SAP-HANA, HANA,Bigdata, Hadoop, Python, Python, Django, REST API, Data Visualization,SAP HANA, Digital Marketing, Video Editing Courses in Thane,
+	Airoli, Nerul, Vashi,Belapur, Seawoods, Kharghar, Taloja, Ulwe, Panvel |Renatus Technology</title>
+	<meta name="description" content="Renatus Technology Solutions, an IT &amp; Software training institute in Mumbai | Thane,
+	Airoli, Nerul, Vashi,Belapur, Seawoods, Kharghar, Taloja, Ulwe, Panvel offers career-focused &amp; job oriented programs with
+	100% placement assurance." />
+	<meta name="keywords" content="100% Job Oriented courses, Software Programming in Thane, Software Programming in mumbai, navi mumbai,
+	software training institutes, software training institutes mumbai, software training institutes thane, Data Science Course in nerul,
+	Data Science Course in navi Mumbai, python course with 100% job guarantee in navi mumbai, python training in navi mumbai, django training,
+	Java Training Course in nerul, java training in navi Mumbai, Software Programming Training, Web Development,AI training, Data Science,
+	PHP Training institute navi mumbai, Android Training institute, Java Training academy, Web design course institute,
+	SEO and Digital marketing training, Wordpress training,SAP Fico training, SAP ABAP  training, SAP HANA  training, SAP SD  training,
+	SAP MM training, .NET training, .NET-MVC training in Navi mumbai, Thane, Airoli, Nerul,Vashi,Belapur, Seawoods, Kharghar, Taloja, Ulwe,
+	Panvel" />
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Renatus Technology Solutions - SAP Training Institute at Nerul</title>
+	<link rel="favicon" href="{% static 'home/images/favicon.png' %}">
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'home/css/font-awesome.min.css' %}">
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="{% static 'home/css/bootstrap-theme.css' %}" media="screen">
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/da-slider.css' %}" />
+	<link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'home/css/style-menu.css' %}">
+	<script src="{% static 'home/js/menu.js' %}" type="text/javascript"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="{% static 'home/js/html5shiv.js' %}"></script>
+	<script src="{% static 'home/js/respond.min.js' %}"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<!--Fixed Menu Bar -->
+	<nav id="ddmenu">	
+		<div class="logo">
+					<i><a href="{% url 'home-page' %}"><img src="{% static 'home/images/logo.png' %}" alt="Renatus Technology"></a></i>
+					<h4>Renatus<br><small>Technology Solutions</small></h4>		
+		</div>
+		<div class="menu-icon"></div>
+		<ul>
+			<li class="no-sub"><a class="top-heading" href="{% url 'home-page' %}">Home</a></li>
+			<li class="no-sub"><a class="top-heading" href="{% url 'about-us' %}">About</a></li>
+			<li class="no-sub"><a class="top-heading" href="{% url 'contact' %}">Contact</a></li>
+			<li class="full-width">			
+				<span class="top-heading">Courses</span>
+							<i class="caret"></i>
+							<div class="dropdown">
+								<div class="dd-inner">
+									<ul class="column">
+										<li><h3>Data Science</h3></li>
+										<li><a href="{% url 'bigdata-hadoop' %}">BigData Hadoop with Spark</a></li>
+										<li><a href="{% url 'python-django' %}">Django Web Framework</a></li>
+										<li><a href="{% url 'artificial-intelligence' %}">Artificial Intelligence-AI</a></li>
+										<li><a href="{% url 'data-science' %}">Data Science</a></li>
+										<li><a href="{% url 'python' %}">Python</a></li>
+									</ul>
+									<ul class="column">
+										<li><h3>SAP n SAP HANA</h3></li>
+										<li><a href="{% url 'sap-abap-hana' %}">SAP ABAP on HANA </a></li>
+										<li><a href="{% url 'sap-fico' %}">SAP FICO</a></li>
+										<li><a href="{% url 'sap-abap' %}">SAP ABAP</a></li>
+										<li><a href="{% url 'sap-basis' %}">SAP BASIS</a></li>
+										<li><a href="{% url 'sap-hana' %}">SAP HANA</a></li>
+										<li><a href="{% url 'sap-mm' %}">SAP MM</a></li>
+										<li><a href="{% url 'sap-sd' %}">SAP SD</a></li>
+									</ul>
+									<ul class="column">
+										<li><h3>Web Technology</h3></li>
+										<li><a href="{% url 'web-development' %}">Web Development</a></li>
+										<li><a href="{% url 'digital-marketing' %}">Digital Marketing</a></li>
+										<li><a href="{% url 'video-editing' %}">Video Editing</a></li>
+										<li><a href="{% url 'core-java' %}">Core Java</a></li>
+										<li><a href="{% url 'php' %}">PHP</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					 </div>
+					</li>
+					{% if user.is_authenticated %}
+						<li class="no-sub"><a class="top-heading" href="{% url 'details' %}">Report</a></li>
+						<li class="no-sub"><a class="top-heading" href="{% url 'search' %}">Search</a></li>
+						<li class="no-sub"><a class="top-heading" href="{% url 'logout' %}">Logout</a></li>
+					{% else %}
+						<li class="no-sub"><a class="top-heading" href="{% url 'login' %}">Login</a></li>
+					{% endif %}
+				</ul>
+		</nav>
+
+	<!-- Fixed navbar -->
+
+	<!-- /.navbar -->
+<!----Section -->
+<main role="main" class="container">
+	<div class="row">
+		<div class="col-md-28">
+			{% block content %}{% endblock %}
+		</div>
+	</div>
+</main>
+
+	<script src="{% static 'home/js/jquery.min.js' %}"></script>
+	<script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'home/js/custom.js' %}"></script>
+</body>
+</html>
